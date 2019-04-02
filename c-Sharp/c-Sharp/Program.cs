@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace ConsoleApp1
 {
@@ -15,9 +16,10 @@ namespace ConsoleApp1
             bool exit = false;
             while (!exit)
             {
-                Console.Clear();
+                
                 Console.WriteLine("Список задач:\r\n 1 - сложение\r\n 2 - разница\r\n 3 - умножение\r\n 4 - деление\r\n 5 - Задача №1\r\n 6 - Задача №2 \r\n 7 - Задача №3\r\n 8 - задача №4\r\n 9 - Выход ");
                 choice = (Console.ReadLine());
+                Console.Clear();
 
                 switch (choice)
                 {
@@ -41,7 +43,7 @@ namespace ConsoleApp1
                             }
                             if (result == 100)
                             {
-                                Console.WriteLine("Результат сложения = 100: " + result);
+                                System.Console.WriteLine("Результат сложения = 100: " + result);
                             }
                         }
 
@@ -55,7 +57,20 @@ namespace ConsoleApp1
                             var B = int.Parse(Console.ReadLine());
                             var C = int.Parse(Console.ReadLine());
                             int result = Second(A, B, C);
-                            Console.WriteLine("Результат разницы : " + result);
+                            if (result > 100)
+                            {
+                                Console.WriteLine("Результат разницы > 100: " + result);
+                            }
+                            if (result < 100)
+                            {
+                                Console.WriteLine("Результат разницы < 100: " + result);
+                            }
+                            if (result == 100)
+                            {
+                                System.Console.WriteLine("Результат разницы = 100: " + result);
+                            }
+
+                         
                         }
 
                         break;
@@ -68,7 +83,20 @@ namespace ConsoleApp1
                             var B = int.Parse(Console.ReadLine());
                             var C = int.Parse(Console.ReadLine());
                             int result = Third(A, B, C);
-                            Console.WriteLine("Результат умножения: " + result);
+                            if (result > 100)
+                            {
+                                Console.WriteLine("Результат умножения > 100: " + result);
+                            }
+                            if (result < 100)
+                            {
+                                Console.WriteLine("Результат умножения < 100: " + result);
+                            }
+                            if (result == 100)
+                            {
+                                System.Console.WriteLine("Результат умножения = 100: " + result);
+                            }
+
+                          
                         }
 
                         break;
@@ -80,7 +108,20 @@ namespace ConsoleApp1
                             var B = int.Parse(Console.ReadLine());
                             var C = int.Parse(Console.ReadLine());
                             float result = Forth(A, B, C);
-                            System.Console.WriteLine("Результат деления: " + result);
+                            if (result > 100)
+                            {
+                                Console.WriteLine("Результат деления > 100: " + result);
+                            }
+                            if (result < 100)
+                            {
+                                Console.WriteLine("Результат деления < 100: " + result);
+                            }
+                            if (result == 100)
+                            {
+                                System.Console.WriteLine("Результат деления = 100: " + result);
+                            }
+
+                         
                         }
 
                         break;
@@ -143,7 +184,7 @@ namespace ConsoleApp1
                             var B = int.Parse(Console.ReadLine());
                             var C = int.Parse(Console.ReadLine());
 
-                            if (-2 <= Convert.ToInt32(B) && Convert.ToInt32(B) < 2)
+                            if (-2 <= B && B < 2)
 
                             {
                                 System.Console.WriteLine("Rezultat: " + TASK6(A));
@@ -174,21 +215,21 @@ namespace ConsoleApp1
                             }
                         }
                         break;
-
+                        
 
 
                     case "9":
-
+                        
                         exit = true;
                         break;
 
                     default:
 
                         Console.WriteLine("Вы не выбрали задачу");
+                     
 
                         break;
-
-
+                       
 
 
                 }
