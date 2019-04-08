@@ -35,7 +35,7 @@ namespace ConsoleApp1
                             int result = First(A, B, C);
                             if (result > 100)
                             {
-                                Console.WriteLine("Результат сложения > 100: " + result);
+                                Console.WriteLine("Результат сложения  >  100: " + result);
                             }
                             if (result < 100)
                             {
