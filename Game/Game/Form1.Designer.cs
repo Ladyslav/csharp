@@ -1,6 +1,6 @@
 ﻿namespace Game
 {
-    partial class Form1
+    partial class Forms
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(375, 429);
-            this.Name = "Form1";
+            this.Name = "Forms";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Forms_Load);
             this.ResumeLayout(false);
 
         }
