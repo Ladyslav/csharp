@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace Game
 {
-    public partial class Form1 : Form
+    public partial class Forms : Form
     {
-        public Form1()
+        public Forms() => InitializeComponent();
+
+        private void Forms_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
-        
+
         }
     }
 }
