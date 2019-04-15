@@ -16,7 +16,10 @@ namespace Game
         int distanceBetweenButtons = 35;
         ButtonExtended[,] allButtons;
 
-        public Forms() => InitializeComponent();
+        public Forms()
+        {
+            InitializeComponent();
+        }
 
         private void  Form1_Load(object sender, EventArgs e)
         {
