@@ -20,7 +20,6 @@ namespace Bank
             client.FriendlyClient();
 
 
-
             var storageOfDollars = new Storage();
             storageOfDollars.PlaceMoney(dollars);
             Console.WriteLine(storageOfDollars.GetStatus());
