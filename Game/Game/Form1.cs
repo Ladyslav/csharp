@@ -12,7 +12,10 @@ namespace Game
 {
     public partial class Forms : Form
     {
-        public Forms() => InitializeComponent();
+        public Forms()
+        {
+            InitializeComponent();
+        }
 
         private void Forms_Load(object sender, EventArgs e)
         {
