@@ -16,15 +16,60 @@ namespace Game_Zombies
 
         static void Main(string[] args)
         {
+            random = new Random();
+            player = new player();
+            DataBase.Load();
 
-            Console.Clear();
-            Console.WriteLine("После крушения корабля");
-            Thread.Sleep(2000);
         go:
             Console.Clear();
-            Console.WriteLine("1:Информация, 2:Инвентарь, 3:Иследовать, 4:Охота");
+            Console.WriteLine("1:играть");
+            Console.WriteLine("2:загрузить");
+            Console.WriteLine("3:выйти");
 
             ConsoleKey key = GetButtom();
+            Console.Clear();
+
+
+            if (key == ConsoleKey.D1)
+            {
+                Console.WriteLine("Напишите имя");
+                player.name = Console.ReadLine();
+                Game();
+            }
+            else if (key == ConsoleKey.D2)
+            {
+
+            }
+            else if (key == ConsoleKey.D3)
+            {
+
+            }
+            else
+            {
+                Console.WriteLine("Комнады не существует");
+                Thread.Sleep(2000);
+                goto go;
+            }
+        }
+
+
+
+
+
+         public static void Game() {
+                Console.WriteLine(DataBase.GetItem(1).name);
+                Console.Clear();
+                Console.WriteLine("После крушения корабля");
+                Thread.Sleep(2000);
+         go:
+
+
+                Console.Clear();
+                Console.WriteLine("1:Информация, 2:Инвентарь, 3:Иследовать, 4:Охота");
+
+                ConsoleKey key = GetButtom();
+
+
 
             if (key == ConsoleKey.D1)
             {
@@ -37,7 +82,9 @@ namespace Game_Zombies
             }
             else if (key == ConsoleKey.D2)
             {
+              
                 player.invetory.GetAllItems();
+
             }
             else if (key == ConsoleKey.D3)
             {
@@ -45,6 +92,7 @@ namespace Game_Zombies
                 {
                     player.power--;
                     explore();
+
                 }
                 else
                     Console.WriteLine("Вы устали");
@@ -56,26 +104,53 @@ namespace Game_Zombies
             else
             {
                 Console.WriteLine("команды не существует");
-                Thread.Sleep(2000);             
+                Thread.Sleep(2000);
                 goto go;
             }
-            Console.WriteLine("Нажмите на любую клавишу чтобы продолжить");
-            Console.ReadKey();
-            goto go;
-        
+                Console.WriteLine("Нажмите на любую клавишу чтобы продолжить");
+                Console.ReadKey();
+                goto go;
 
 
+            }
 
-        }
 
-        private static ConsoleKey GetButtom()
+        public static ConsoleKey GetButtom()
         {
-            throw new NotImplementedException();
+            var but = Console.ReadKey(true).Key;
+            return but;
         }
         public static void explore()
         {
+            int ran = random.Next(0, 20);
+
+            if (ran <5)
+            {
+                Console.WriteLine("Вы нашли пещеру");
+            }
+            else if (ran<=10)
+            {
+                Console.WriteLine("Вы нашли сундук");
+            }
+            else if (ran <= 15)
+            {
+                Console.WriteLine("Вы нашли кристал");
+            }
+            else
+            {
+                Console.WriteLine("Вы ничего не нашли");
+            }
+
+          
 
         }
 
+
+
+
+        }
+
+     
+
     }
-}
+
