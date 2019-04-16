@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Game_Zombies
 {
-    class Fight
+    class Fight : Program
     {
 
       static player player
@@ -29,7 +29,9 @@ namespace Game_Zombies
             Console.WriteLine($"{enemy.Name}: {enemy.Health} HP");
             Console.WriteLine($"{player.name}: {player.health} HP");
             Console.WriteLine("1: Ydarit, 2: Run away");
-            ConsoleKey key = GetKey();
+
+            ConsoleKey key = GetButtom();
+
             if (key == ConsoleKey.D1)
             {
                 enemy.Health -= Math.Max(player.damage -= enemy.Armor, 1);
@@ -60,13 +62,13 @@ namespace Game_Zombies
             if (enemy.Health > 0)
             {
                 player.health -= Math.Max(enemy.Damage -= player.Armor, 1);
-            }
+            } 
 
-            if (player.health <= 0)
+            if (player.health<=0)
             {
                 goto lose;
             }
-            else if (enemy.Health <= 0)
+            else if (enemy.Health<=0)
             {
                 goto win;
             }
@@ -86,7 +88,7 @@ namespace Game_Zombies
             Console.Clear();
             Console.WriteLine("You lose");
             return;
-
+              
 
 
 
@@ -97,11 +99,7 @@ namespace Game_Zombies
             ;
 
         }
-
-        private static ConsoleKey GetKey()
-        {
-            return Program.GetButtom();
-        }
-
+        
+        
     }
 }
