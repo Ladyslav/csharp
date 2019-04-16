@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Game
 {
-    public partial class Forms : Form
+    public partial class Form1 : Form
 
     {
 
@@ -16,7 +16,7 @@ namespace Game
         int distanceBetweenButtons = 35;
         ButtonExtended[,] allButtons;
 
-        public Forms()
+        public Form1()
         {
             InitializeComponent();
         }
