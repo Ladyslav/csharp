@@ -18,6 +18,7 @@ namespace Game_Zombies
         public player()
         {
           var inventory = new inventory();
+            //invetory.AddItem(new item("Stick", 0, true, 6)); 
 
 
             healthMax = 20;
@@ -34,7 +35,33 @@ namespace Game_Zombies
 
         public void AddItem(item item)
         {
+            if (items.Count > 0)
+            {
+                for (int i = 0; i < items.Count; i++)
+                {
+                    if (item.Id == items[i].Id && items[i].isStack)
+                    {
+                        items[i].count += item.count;
+                        break;
+                    }
+                    else if (i == items.Count - 1)
+                    {
+                        items.Add(item);
+                        break;
+                    }
+                }
+            }
+            else
+                items.Add(item);
 
+        }
+
+        public void GetAllItems()
+        {
+            for(int i = 0; i < items.Count; i++)
+            {
+                Console.WriteLine($"{i}: {items[i].name}, количество: {items[i].count}");
+            }
         }
     }
 }
