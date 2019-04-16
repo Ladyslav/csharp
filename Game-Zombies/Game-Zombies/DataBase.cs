@@ -9,9 +9,9 @@ namespace Game_Zombies
   public static class DataBase
     {
         public static List<item> items;
-        private static List<enemy> enemies;
+        public static List<enemy> enemies;
 
-        internal static List<enemy> Enemies { get => enemies; set => enemies = value; }
+     
 
         public static void Load()
         {
@@ -19,13 +19,15 @@ namespace Game_Zombies
             enemies = new List<enemy>();
 
             items.Add(new item("stick", 1, true));
+
+            enemies.Add(new enemy("Zombi", 0, 20, 2, 0));
             
         }
 
 
         public static item GetItem(int ID, int count=1)
         {
-            item item =)tems.Find(I => I.Id == ID).Clone();
+            item item = (item)items.Find(I => I.Id == ID).Clone();
             if (item != null)
             {
                 if (item.isStack)
@@ -42,7 +44,7 @@ namespace Game_Zombies
 
         public static  enemy GetEnemy(int ID)
         {
-            enemy enemy = enemies.Find(E => E.ID == ID);
+            enemy enemy =(enemy)enemies.Find(E => E.ID == ID).Clone();
 
             if (enemy != null)
             {
@@ -57,3 +59,4 @@ namespace Game_Zombies
 
     }
 }
+ 
