@@ -30,7 +30,7 @@ namespace Game_Zombies
 
         public object Clone()
         {
-            return this; 
+           return  MemberwiseClone();
         }
     }
 }
