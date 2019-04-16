@@ -17,7 +17,7 @@
 
         public object Clone()
         {
-            return this;
+            return MemberwiseClone();
         }
     }
 
