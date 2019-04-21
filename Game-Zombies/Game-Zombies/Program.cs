@@ -104,7 +104,7 @@ namespace Game_Zombies
                 }
                 else
                 {
-                    Console.WriteLine("команды не существует");
+                    Console.WriteLine("Kоманды не существует");
                     Thread.Sleep(2000);                   
                 }
                 Console.WriteLine("Нажмите на любую клавишу чтобы продолжить");
