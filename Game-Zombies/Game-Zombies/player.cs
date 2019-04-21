@@ -18,9 +18,9 @@ namespace Game_Zombies
         public player()
         {
           var inventory = new inventory();
-            //invetory.AddItem(new item("Stick", 0, true, 6)); 
 
-
+            //inventory.AddItem(new item("Stick", 0, true, 6));
+            
             healthMax = 20;
             powerMax = 10;
             health = healthMax;
