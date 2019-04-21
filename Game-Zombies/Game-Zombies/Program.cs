@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace Game_Zombies
 {
+    [Serializable]
     class Program
     {
        public static player player;
@@ -16,8 +19,22 @@ namespace Game_Zombies
 
         static void Main(string[] args)
         {
-            random = new Random();
-            player = new player();
+
+
+             random = new Random();
+             player = new player();
+            BinaryFormatter formatter = new BinaryFormatter();
+           
+            using (FileStream fs = new FileStream("people.dat", FileMode.OpenOrCreate))
+            {
+                formatter.Serialize(fs, random);
+
+            }
+            using (FileStream fs = new FileStream("people.dat", FileMode.OpenOrCreate))
+            {
+                player newPlayer = (player)formatter.Deserialize(fs);
+                
+            }
             DataBase.Load();
         
             Console.Clear();
@@ -49,6 +66,7 @@ namespace Game_Zombies
                 Thread.Sleep(2000);
                 
             }
+
         }
 
 
