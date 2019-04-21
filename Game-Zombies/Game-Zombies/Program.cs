@@ -19,8 +19,7 @@ namespace Game_Zombies
             random = new Random();
             player = new player();
             DataBase.Load();
-
-        go:
+        
             Console.Clear();
             Console.WriteLine("1:играть");
             Console.WriteLine("2:загрузить");
@@ -48,7 +47,7 @@ namespace Game_Zombies
             {
                 Console.WriteLine("Комнады не существует");
                 Thread.Sleep(2000);
-                goto go;
+                
             }
         }
 
@@ -56,12 +55,14 @@ namespace Game_Zombies
 
 
 
-         public static void Game() {
-                Console.WriteLine(DataBase.GetItem(1).name);
-                Console.Clear();
-                Console.WriteLine("После крушения корабля");
-                Thread.Sleep(2000);
-         go:
+        public static void Game()
+        {
+            Console.WriteLine(DataBase.GetItem(1).name);
+            Console.Clear();
+            Console.WriteLine("После крушения корабля");
+            Thread.Sleep(2000);
+            while (true)
+            {
 
 
                 Console.Clear();
@@ -71,49 +72,48 @@ namespace Game_Zombies
 
 
 
-            if (key == ConsoleKey.D1)
-            {
-                Console.WriteLine($"имя:{player.name}");
-                Console.WriteLine($"жизнь:{player.health}/{player.healthMax}");
-                Console.WriteLine($"энергия:{player.power}/{player.powerMax}");
-                Console.WriteLine("Нажмите на любую кнопку");
-                Console.ReadKey();
-                goto go;
-            }
-            else if (key == ConsoleKey.D2)
-            {
-              
-                player.invetory.GetAllItems();
-
-            }
-            else if (key == ConsoleKey.D3)
-            {
-                if (player.power > 0)
+                if (key == ConsoleKey.D1)
                 {
-                    player.power--;
-                    explore();
+                    Console.WriteLine($"имя:{player.name}");
+                    Console.WriteLine($"жизнь:{player.health}/{player.healthMax}");
+                    Console.WriteLine($"энергия:{player.power}/{player.powerMax}");
+                    Console.WriteLine("Нажмите на любую кнопку");
+                    Console.ReadKey();
+                                      
+                }
+                else if (key == ConsoleKey.D2)
+                {
+
+                    player.invetory.GetAllItems();
 
                 }
+                else if (key == ConsoleKey.D3)
+                {
+                    if (player.power > 0)
+                    {
+                        player.power--;
+                        explore();
+
+                    }
+                    else
+                        Console.WriteLine("Вы устали");
+                }
+                else if (key == ConsoleKey.D4)
+                {
+                    Fight.FightEnemy(DataBase.GetEnemy(0));
+                }
                 else
-                    Console.WriteLine("Вы устали");
-            }
-            else if (key == ConsoleKey.D4)
-            {
-                Fight.FightEnemy(DataBase.GetEnemy(0));
-            }
-            else
-            {
-                Console.WriteLine("команды не существует");
-                Thread.Sleep(2000);
-                goto go;
-            }
+                {
+                    Console.WriteLine("команды не существует");
+                    Thread.Sleep(2000);                   
+                }
                 Console.WriteLine("Нажмите на любую клавишу чтобы продолжить");
                 Console.ReadKey();
-                goto go;
+                
 
 
             }
-
+        }
 
         public static ConsoleKey GetButtom()
         {
