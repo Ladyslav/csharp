@@ -10,11 +10,13 @@ namespace Game_Zombies
     class Fight : Program
     {
 
-      static player player
+        static player player
         {
             get { return Program.player; }
-            set { Program.player = value;
- }
+            set
+            {
+                Program.player = value;
+            }
         }
 
 
@@ -25,81 +27,70 @@ namespace Game_Zombies
             Console.ReadLine();
             Console.Clear();
 
-        go:
-            Console.WriteLine($"{enemy.Name}: {enemy.Health} HP");
-            Console.WriteLine($"{player.name}: {player.health} HP");
-            Console.WriteLine("1: Ydarit, 2: Run away");
-
-            ConsoleKey key = GetButtom();
-
-            if (key == ConsoleKey.D1)
+            while (true)
             {
-                enemy.Health -= Math.Max(player.damage -= enemy.Armor, 1);
-            }
-            else if (key == ConsoleKey.D2)
-            {
-                int r = Program.random.Next(1, 5);
+                Console.WriteLine($"{enemy.Name}: {enemy.Health} HP");
+                Console.WriteLine($"{player.name}: {player.health} HP");
+                Console.WriteLine("1: Ydarit, 2: Run away");
 
-                if (r == 2)
+                ConsoleKey key = GetButtom();
+
+                if (key == ConsoleKey.D1)
                 {
-                    Console.WriteLine("Вам удалось убежать");
-                    goto run;
+                    enemy.Health -= Math.Max(player.damage -= enemy.Armor, 1);
+                }
+                else if (key == ConsoleKey.D2)
+                {
+                    int r = Program.random.Next(1, 5);
+
+                    if (r == 2)
+                    {
+                        Console.WriteLine("Вам удалось убежать");
+                        return;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Вам не удалось убежать");
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("Вам не удалось убежать");
+                    Console.WriteLine("команды не существует");
+                    Thread.Sleep(2000);
+                    Console.Clear();
+                    return;
                 }
-            }
-            else
-            {
-                Console.WriteLine("команды не существует");
-                Thread.Sleep(2000);
+
+
+
+                if (enemy.Health > 0)
+                {
+                    player.health -= Math.Max(enemy.Damage -= player.Armor, 1);
+                }
+
+                if (player.health <= 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine("You lose");
+                    return;
+                }
+                else if (enemy.Health <= 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine("You win!");
+                    Console.WriteLine("You got experience");
+                    return;
+                }
                 Console.Clear();
-                goto go;
             }
 
 
-            if (enemy.Health > 0)
-            {
-                player.health -= Math.Max(enemy.Damage -= player.Armor, 1);
-            } 
-
-            if (player.health<=0)
-            {
-                goto lose;
-            }
-            else if (enemy.Health<=0)
-            {
-                goto win;
-            }
-            else
-            {
-                Console.Clear();
-                goto go;
-            }
-
-        win:
-            Console.Clear();
-            Console.WriteLine("You win!");
-            Console.WriteLine("You got experience");
-            return;
-
-        lose:
-            Console.Clear();
-            Console.WriteLine("You lose");
-            return;
-              
 
 
 
 
 
-
-        run:
-            ;
 
         }
-        
-        
     }
 }
