@@ -10,6 +10,12 @@ namespace homework
     {
         static void Main(string[] args)
         {
+            Client client = new Client("Vladislav", 300);
+            client.Put(50);
+            Console.WriteLine(client.CountOfMoney);
+            client.Take(25);
+            Console.WriteLine(client.CountOfMoney);
+            Console.Read();
         }
     }
 }
