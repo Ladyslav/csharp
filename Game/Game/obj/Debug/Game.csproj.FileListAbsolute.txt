@@ -1,0 +1,11 @@
+D:\git\csharp\Game\Game\obj\Debug\Game.csprojAssemblyReference.cache
+D:\git\csharp\Game\Game\obj\Debug\Game.Properties.Resources.resources
+D:\git\csharp\Game\Game\obj\Debug\Game.csproj.GenerateResource.cache
+D:\git\csharp\Game\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+D:\git\csharp\Game\Game\obj\Debug\Game.Forms.resources
+D:\git\csharp\Game\Game\obj\Debug\Game.Program.resources
+D:\git\csharp\Game\Game\bin\Debug\Game.exe.config
+D:\git\csharp\Game\Game\bin\Debug\Game.exe
+D:\git\csharp\Game\Game\bin\Debug\Game.pdb
+D:\git\csharp\Game\Game\obj\Debug\Game.exe
+D:\git\csharp\Game\Game\obj\Debug\Game.pdb
