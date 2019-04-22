@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace interface
+namespace homework
 {
     interface User
 {
+    string Name { get; set; }
 }
 }
