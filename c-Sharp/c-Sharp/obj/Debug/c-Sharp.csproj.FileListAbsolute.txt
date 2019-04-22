@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\c-Sharp\c-Sharp\bin\Debug\c-Sharp.exe.config
+C:\Users\User\source\repos\c-Sharp\c-Sharp\bin\Debug\c-Sharp.exe
+C:\Users\User\source\repos\c-Sharp\c-Sharp\bin\Debug\c-Sharp.pdb
+C:\Users\User\source\repos\c-Sharp\c-Sharp\obj\Debug\c-Sharp.csprojAssemblyReference.cache
+C:\Users\User\source\repos\c-Sharp\c-Sharp\obj\Debug\c-Sharp.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\c-Sharp\c-Sharp\obj\Debug\c-Sharp.exe
+C:\Users\User\source\repos\c-Sharp\c-Sharp\obj\Debug\c-Sharp.pdb
+D:\git\csharp\c-Sharp\c-Sharp\bin\Debug\c-Sharp.exe.config
+D:\git\csharp\c-Sharp\c-Sharp\bin\Debug\c-Sharp.exe
+D:\git\csharp\c-Sharp\c-Sharp\bin\Debug\c-Sharp.pdb
+D:\git\csharp\c-Sharp\c-Sharp\obj\Debug\c-Sharp.csprojAssemblyReference.cache
+D:\git\csharp\c-Sharp\c-Sharp\obj\Debug\c-Sharp.csproj.CoreCompileInputs.cache
+D:\git\csharp\c-Sharp\c-Sharp\obj\Debug\c-Sharp.exe
+D:\git\csharp\c-Sharp\c-Sharp\obj\Debug\c-Sharp.pdb

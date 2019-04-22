@@ -1,0 +1,7 @@
+D:\git\csharp\Game-Zombies\Game-Zombies\bin\Debug\Game-Zombies.exe.config
+D:\git\csharp\Game-Zombies\Game-Zombies\bin\Debug\Game-Zombies.exe
+D:\git\csharp\Game-Zombies\Game-Zombies\bin\Debug\Game-Zombies.pdb
+D:\git\csharp\Game-Zombies\Game-Zombies\obj\Debug\Game-Zombies.csprojAssemblyReference.cache
+D:\git\csharp\Game-Zombies\Game-Zombies\obj\Debug\Game-Zombies.csproj.CoreCompileInputs.cache
+D:\git\csharp\Game-Zombies\Game-Zombies\obj\Debug\Game-Zombies.exe
+D:\git\csharp\Game-Zombies\Game-Zombies\obj\Debug\Game-Zombies.pdb
